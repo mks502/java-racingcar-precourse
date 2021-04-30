@@ -1,6 +1,6 @@
 package racingcar;
 
-import racingcar.constant.Rule;
+import racingcar.constant.CarNameRule;
 
 public class CarName {
     private String name;
@@ -15,7 +15,7 @@ public class CarName {
     }
 
     private boolean isValidName(String name) {
-        if (name.length() < Rule.MIN_NAME_LENGTH || name.length() > Rule.MAX_NAME_LENGTH)
+        if (name.length() < CarNameRule.MIN_NAME_LENGTH || name.length() > CarNameRule.MAX_NAME_LENGTH)
             throw new IllegalArgumentException("자동차 이름 규칙에 맞지 않습니다.");
         return true;
     }
