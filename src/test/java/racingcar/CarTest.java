@@ -56,7 +56,7 @@ public class CarTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {MIN_NUM - 1, MAX_NUM + 1, -5, 15})
+    @ValueSource(ints = {MIN_RANGE_NUM - 1, MAX_RANGE_NUM + 1, -5, 15})
     @DisplayName("랜덤한 값은 정해진 범위 (0~9)여야한다. - 규칙 명시")
     void 자동차_값에_벗어남_exception(int number) {
         assertThatThrownBy(() -> {

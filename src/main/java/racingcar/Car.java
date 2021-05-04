@@ -26,7 +26,7 @@ public class Car {
     }
 
     public void controlMove(int number) {
-        if (number < MIN_NUM || number > MAX_NUM) {
+        if (number < MIN_RANGE_NUM || number > MAX_RANGE_NUM) {
             throw new IllegalArgumentException("값의 범위를 벗어났습니다.");
         }
         if (number >= MOVE_FORWARD_CONDITION_NUMBER) {
@@ -36,7 +36,7 @@ public class Car {
     }
 
     public void play() {
-        int randomNumber = RandomUtil.createRandomNumber(MIN_NUM, MAX_NUM);
+        int randomNumber = RandomUtil.createRandomNumber(MIN_RANGE_NUM, MAX_RANGE_NUM);
         controlMove(randomNumber);
     }
 }
